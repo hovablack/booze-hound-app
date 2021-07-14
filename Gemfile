@@ -20,7 +20,21 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '~> 4.2'
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 5.0'
+# Use jquery as the JavaScript library
+gem 'jquery-rails', '~> 4.4'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 2.2', group: :doc
+# Sass-powered version of Bootstrap 3
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# Authenticate with Google via OAuth2 in OmniAuth
+gem 'omniauth-google-oauth2'
+# Autoload dotenv in Rails
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -42,6 +56,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Rails application layout for HTML5
+  gem 'rails_layout', '~> 1.0', '>= 1.0.42'
 end
 
 group :test do
