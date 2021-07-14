@@ -35,6 +35,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'omniauth-google-oauth2'
 # Autoload dotenv in Rails
 gem 'dotenv-rails', groups: [:development, :test]
+gem "omniauth-rails_csrf_protection"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
       u.provider = auth['provider']
       u.password = SecureRandom.hex(10)
     end
-    if @user.valid?
+    if @user.save
       log_in @user
       redirect_to @user
     else
