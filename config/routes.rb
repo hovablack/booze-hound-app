@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   resources :drinks do
-    resources :reviews, shallow: true
+    resources :reviews
   end
   resources :users do
-    resources :drinks, shallow: true
+    resources :drinks
   end
   resources :reviews
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

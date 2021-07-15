@@ -12,7 +12,7 @@
   <div class="col-md-4">
     <% @drink.reviews.each do |dr| %>
       <li>
-        <%= link_to dr.content, review_path(@drink, dr) %>
+        <%= link_to dr.content, review_path(dr) %>
         <h6>Reviewed by <strong><%= dr.user.username %></strong></h6>
       </li>
     <% end %>
