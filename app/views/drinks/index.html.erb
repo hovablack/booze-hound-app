@@ -1,0 +1,12 @@
+<% provide(:title, 'Drinks') %>
+<h1>Our Drinks</h1>
+
+<div class="row">
+  <ul class="drinks">
+    <% @drinks.each do |drink| %>
+      <li>
+        <h4><%= link_to drink.name, drink %></h4>
+      </li>
+    <% end %>
+  </ul>
+</div>

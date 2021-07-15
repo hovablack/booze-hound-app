@@ -1,0 +1,14 @@
+<% provide(:title, 'Write Review') %>
+<% provide(:button_text, 'Submit review') %>
+
+<%= form_for(@review) do |f| %>
+  <%= render 'layouts/errors', object: f.object %>
+  <%= f.label :content %>
+  <%= f.text_area :content, class: 'form-control' %>
+  <%= f.label :function %>
+  <%= f.text_field :function, class: 'form-control' %>
+
+  <%= f.hidden_field :drink_id, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

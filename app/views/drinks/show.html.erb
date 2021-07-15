@@ -1,0 +1,10 @@
+<% provide(:title, 'The Booze') %>
+
+<div class="container">
+  <div class="col-md-8">
+    <h1><%= @drink.name %></h1>
+    <h6>added by <%= link_to @drink.user.username, @drink.user %></h6>
+    <h5>Rating</h5>
+    <h4><%= @drink.description %></h4>
+  </div>
+</div>

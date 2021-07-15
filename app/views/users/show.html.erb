@@ -3,13 +3,24 @@
 <div class="row">
   <aside class="col-md-4">
     <section class="user_info">
-      <h3>
+      <h1>
         <%= gravatar_for @user %>
         <%= @user.username.capitalize %>
-      </h3>
+      </h1>
       <h1>
         <%= @user.email %>
+        <p><%= link_to "Edit my profile", edit_user_path(current_user) %></p>
       </h1>
     </section>
   </aside>
+  <div class="col-md-6">
+    <section>
+      <h3>
+        <p><%= link_to "Add drink", new_drink_path(current_user) %></p>
+        <p><%= link_to "My drinks", drinks_path(current_user) %></p>
+        <p><%= link_to "Review drink", new_review_path %></p>
+        <p><%= link_to "My reviews", reviews_path(current_user) %></p>
+      </h3>
+    </section>
+  </div>
 </div>
