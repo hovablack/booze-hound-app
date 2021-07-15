@@ -5,7 +5,8 @@
   <ul class="drinks">
     <% @drinks.each do |drink| %>
       <li>
-        <h4><%= link_to drink.name, drink %></h4>
+        <h3><%= link_to drink.name, drink %></h3>
+        <h5><%= link_to "Review drink", new_drink_review_path(drink.id) %></h5>
       </li>
     <% end %>
   </ul>

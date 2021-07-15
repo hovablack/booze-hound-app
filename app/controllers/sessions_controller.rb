@@ -14,13 +14,10 @@ class SessionsController < ApplicationController
   end
 
   def omniauth
-    @user = User.find_or_create_by(uid: auth['uid']) do |u|
-      u.username = auth['info']['name']
-      u.email = auth['info']['email']
-      u.image = auth['info']['image']
-      u.uid = auth['uid']
-      u.provider = auth['provider']
-      u.password = SecureRandom.hex(10)
+    @user = User.find_or_create_by(email: auth["info"]["email"]) do |u|
+      u.username= auth["info"]["name"]
+      u.image= auth["info"]["image"]
+      u.password= SecureRandom.hex(12)
     end
     if @user.save
       log_in @user

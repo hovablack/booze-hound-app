@@ -1,12 +1,18 @@
 <% provide(:title, 'Write Review') %>
 <% provide(:button_text, 'Submit review') %>
+<div class="container">
+  <div class="col-md-8">
+    <h1><%= @review.drink.name %></h1>
+  </div>
+</div>
 
-<%= form_for(@review) do |f| %>
+<%= form_for([@review.drink, @review]) do |f| %>
   <%= render 'layouts/errors', object: f.object %>
+
   <%= f.label :content %>
-  <%= f.text_area :content, class: 'form-control' %>
+  <%= f.text_area :content, placeholder: "Compose your review...", class: 'form-control' %>
   <%= f.label :function %>
-  <%= f.text_field :function, class: 'form-control' %>
+  <%= f.select :function, ([" ", "Helpful", "Not Helpful"]), class: 'form-control' %>
 
   <%= f.hidden_field :drink_id, class: 'form-control' %>
 

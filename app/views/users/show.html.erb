@@ -16,10 +16,10 @@
   <div class="col-md-6">
     <section>
       <h3>
-        <p><%= link_to "Add drink", new_drink_path(current_user) %></p>
-        <p><%= link_to "My drinks", drinks_path(current_user) %></p>
-        <p><%= link_to "Review drink", new_review_path %></p>
-        <p><%= link_to "My reviews", reviews_path(current_user) %></p>
+        <p><%= link_to "Add drink", new_drink_path %></p>
+        <p><%= link_to "My drinks", drinks_path %></p>
+        <p><%= link_to "Review drink", drinks_path %></p>
+        <p><%= link_to "My reviews", drink_reviews_path(:drink_id) %></p>
       </h3>
     </section>
   </div>

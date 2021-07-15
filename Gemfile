@@ -31,6 +31,8 @@ gem 'jquery-rails', '~> 4.4'
 gem 'sdoc', '~> 2.2', group: :doc
 # Sass-powered version of Bootstrap 3
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# A generalized Rack framework for multiple-provider authentication
+gem 'omniauth', '~> 2.0', '>= 2.0.4'
 # Authenticate with Google via OAuth2 in OmniAuth
 gem 'omniauth-google-oauth2'
 # Autoload dotenv in Rails
